@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Button, Progress, Alert } from 'reactstrap';
 
@@ -8,6 +9,11 @@ class SeatChooser extends React.Component {
   componentDidMount() {
     const { loadSeats } = this.props;
     loadSeats();
+      let intervalId = setInterval(() => loadSeats(), 120000);
+  }
+ 
+  componentWillUnmount(){
+    clearInterval(this.intervalId);
   }
 
   isTaken = (seatId) => {
