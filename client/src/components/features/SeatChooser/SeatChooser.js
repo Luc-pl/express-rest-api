@@ -9,11 +9,13 @@ class SeatChooser extends React.Component {
   componentDidMount() {
     const { loadSeats } = this.props;
     loadSeats();
-      let intervalId = setInterval(() => loadSeats(), 120000);
+    
+    let intervalId = setInterval(() => loadSeats(), 120000);
+    this.setState({ intervalidId: intervalId});
   }
  
   componentWillUnmount(){
-    clearInterval(this.intervalId);
+    clearInterval(this.state.intervalId);
   }
 
   isTaken = (seatId) => {
