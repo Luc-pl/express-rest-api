@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path');
+//const path = require('path');
 //const cors = require('cors');
 const app = express();
 
@@ -13,7 +13,7 @@ app.listen(8000, () => {
 
 app.use(express.json());
 //app.use(cors());
-app.use(express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/api', testimonialsRoutes);
 app.use('/api', concertsRoutes);
