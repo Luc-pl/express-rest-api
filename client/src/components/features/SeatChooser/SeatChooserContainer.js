@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   loadSeats: () => dispatch(loadSeatsRequest()),
-  loadSeatsData: seats => dispatch(loadSeats(seats)),
+  updateSeats: (seats) => dispatch(loadSeats(seats)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SeatChooser);
