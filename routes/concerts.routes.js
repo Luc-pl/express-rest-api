@@ -4,12 +4,12 @@ const ConcertsController = require('../controllers/concerts.controller');
 
 router.route('/concerts').get(ConcertsController.getAll);
 
-router.route('/concerts/:id').get(ConcertController.getById);
+router.route('/concerts/:id').get(ConcertsController.getById);
 
-router.route('/concerts').post(ConcertController.post);
+router.route('/concerts').post(ConcertsController.post);
 
-router.route('/concerts/:id').delete(ConcertController.delete);
+router.route('/concerts/:id').delete(ConcertsController.delete);
 
-router.route('/concerts/:id').put(ConcertController.put);
+router.route('/concerts/:id').put(ConcertsController.put);
 
 module.exports = router;

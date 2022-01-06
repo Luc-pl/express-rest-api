@@ -21,7 +21,7 @@ exports.getById = async (req, res) => {
 };
 
 exports.post = async (req, res) => {
-  const { preformer, genre, price, day, image } = req.body;
+  const { performer, genre, price, day, image } = req.body;
   try {
       const newConcert = new Concerts({ performer, genre, price, day, image });
       await newConcert.save();
@@ -33,7 +33,7 @@ exports.post = async (req, res) => {
 };
 
 exports.put = async (req, res) => {
-  const { preformer, genre, price, day, image } = req.body;
+  const { performer, genre, price, day, image } = req.body;
   try {
       const con = await (Concerts.findById(req.params.id));
       if (con) {
